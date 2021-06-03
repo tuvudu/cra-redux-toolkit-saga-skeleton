@@ -1,7 +1,7 @@
 import React from "react";
 import logo from "./logo.svg";
 import "./App.css";
-import { UserListContainer } from "../../containers/userList";
+import { UserListContainer } from "~/containers/userList";
 
 function App() {
   return (

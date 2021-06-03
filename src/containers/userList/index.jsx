@@ -1,9 +1,7 @@
 import React, { useEffect } from "react";
 import { useSelector, useDispatch } from "react-redux";
-import {
-  fetchUsersPending,
-  selectUsers,
-} from "../../app/redux/users/users.slice";
+
+import { fetchUsersPending, selectUsers } from "~/app/redux/users/users.slice";
 
 export function UserListContainer() {
   const { data } = useSelector(selectUsers);
