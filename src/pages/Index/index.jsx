@@ -1,6 +1,6 @@
 import React from 'react';
 
-import { UserListContainer } from '~/containers/userList';
+import UserListContainer from '~/containers/userList';
 
 import logo from './logo.svg';
 import './App.css';

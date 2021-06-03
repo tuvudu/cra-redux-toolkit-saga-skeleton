@@ -11,7 +11,7 @@ const UserListContainer = () => {
     dispatch(fetchUsersPending());
   }, [dispatch]);
 
-  return <div>{data && data.map((item) => <p>{item?.name}</p>)}</div>;
+  return <div>{data && data.map((item) => <p key={item.name}>{item?.name}</p>)}</div>;
 };
 
 export default UserListContainer;
