@@ -1,0 +1,6 @@
+build
+node_modules
+/dist
+*.scss
+*.css
+/.next

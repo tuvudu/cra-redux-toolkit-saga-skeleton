@@ -1,9 +1,9 @@
-import React, { useEffect } from "react";
-import { useSelector, useDispatch } from "react-redux";
+import React, { useEffect } from 'react';
+import { useSelector, useDispatch } from 'react-redux';
 
-import { fetchUsersPending, selectUsers } from "~/app/redux/users/users.slice";
+import { fetchUsersPending, selectUsers } from '~/app/redux/users/users.slice';
 
-export function UserListContainer() {
+const UserListContainer = () => {
   const { data } = useSelector(selectUsers);
   const dispatch = useDispatch();
 
@@ -12,4 +12,6 @@ export function UserListContainer() {
   }, [dispatch]);
 
   return <div>{data && data.map((item) => <p>{item?.name}</p>)}</div>;
-}
+};
+
+export default UserListContainer;

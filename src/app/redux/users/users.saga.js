@@ -1,18 +1,14 @@
-import { all, call, put, takeLatest } from "redux-saga/effects";
+import { all, call, put, takeLatest } from 'redux-saga/effects';
 
-import { fetchUser } from "./users.api";
-import {
-  fetchUsersPending,
-  fetchUsersFulfilled,
-  fetchUsersRejected,
-} from "./users.slice";
+import { fetchUser } from './users.api';
+import { fetchUsersPending, fetchUsersFulfilled, fetchUsersRejected } from './users.slice';
 
 export function* fetchDataSaga() {
   try {
-    let result = yield call(() => fetchUser());
+    const result = yield call(() => fetchUser());
     yield put(fetchUsersFulfilled(result.data));
   } catch (e) {
-    yield put(fetchUsersRejected({ message: "test" }));
+    yield put(fetchUsersRejected({ message: 'test' }));
   }
 }
 

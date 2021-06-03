@@ -1,4 +1,4 @@
-import { createSlice } from "@reduxjs/toolkit";
+import { createSlice } from '@reduxjs/toolkit';
 
 const initialState = {
   data: [],
@@ -7,7 +7,7 @@ const initialState = {
 };
 
 export const usersSlice = createSlice({
-  name: "users",
+  name: 'users',
   initialState,
   reducers: {
     fetchUsersPending: (state) => {
@@ -24,8 +24,7 @@ export const usersSlice = createSlice({
   },
 });
 
-export const { fetchUsersPending, fetchUsersFulfilled, fetchUsersRejected } =
-  usersSlice.actions;
+export const { fetchUsersPending, fetchUsersFulfilled, fetchUsersRejected } = usersSlice.actions;
 
 export const selectUsers = (state) => state.users;
 
